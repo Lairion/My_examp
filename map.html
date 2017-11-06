@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>OpenStreetMap with Google Maps v3 API</title>
+        <style type="text/css">
+            body{
+                width:100%;
+                height: 100%
+            } 
+
+            #map {
+                height: 250px;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .flex_block{
+                display: flex;
+                justify-content: center;
+                align-items: center
+            }
+        </style>
+        <!-- <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>/ -->
+        <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script> -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
+
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYsYWqJHYpSoIT_wplRrnOnPRNBZ6RIfQ"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYsYWqJHYpSoIT_wplRrnOnPRNBZ6RIfQ&libraries=places"></script>
+        <script src="jquery.geocomplete.js"></script>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    </head>
+    <body>
+            <div class="flex_block" style="width: 100%; height: 450px">
+                <div>
+                    <input id="address" type="textbox"/>
+                <!-- <input type="button" value="Encode" onclick="codeAddress()"> -->
+                    <input id="datepick"/>
+                </div>
+                
+                <!-- <div class="details">
+                    Latitude:     <span data-geo="lat" />
+                    
+                </div>
+                <div class="details">
+                    Longitude:    <span data-geo="lng" />
+                </div> -->
+            </div>
+        <div id="map">
+            
+        </div>
+            <div>
+                
+            </div>
+        <script type="text/javascript">
+            
+        $("#datepick").daterangepicker(
+                {
+                    locale: {
+                      format: 'YYYY-MM-DD'
+                    },
+                    startView: 1,                 
+                })
+            var geocoder;
+            var map;
+            var service;
+            function initialize() {
+                geocoder = new google.maps.Geocoder();
+                var latlng = new google.maps.LatLng(-34.397, 150.644);
+                var mapOptions = {
+                  zoom: 8,
+                  center: latlng,
+                  // mapTypeId: "OSM",
+                }
+                map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            }
+
+
+            // function codeAddress() {
+            //     var address = document.getElementById('address').value;
+            //     geocoder.geocode( { 'address': address}, function(results, status) {
+            //       if (status == 'OK') {
+            //         for (var i=0; i<results.length;i++){
+            //             console.dir(results[i])
+            //         }
+            //         map.setCenter(results[0].geometry.location);
+            //         var marker = new google.maps.Marker({
+            //             map: map,
+            //             position: results[0].geometry.location
+            //         });
+            //       } else {
+            //         alert('Geocode was not successful for the following reason: ' + status);
+            //       }
+            //     });
+            // }
+            initialize()
+            $("#address").geocomplete();
+        </script>
+    </body>
+</html>

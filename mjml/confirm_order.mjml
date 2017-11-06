@@ -1,0 +1,78 @@
+<mjml>
+  <mj-body>
+    <mj-container>
+
+      <!-- Header -->
+      <mj-section padding-bottom="0" background-color="white">
+      	<mj-column width="50%">
+	      	<mj-text align="left">
+	      		Location de Photobooth
+	      	</mj-text>
+      	</mj-column>
+      	<mj-column width="50%" background-color="rgb(247,178,173)">
+	      	<mj-text align="left">
+	      		Ouvrir dans le navigateur
+	      	</mj-text>
+      	</mj-column>
+      </mj-section>
+
+      <!-- Banner -->
+      <mj-section full-width="full-width" background-url="loner_img.png" background-size="cover"
+              background-repeat="no-repeat" height = "350" vertical-align="center" align="center">
+      	<mj-column background-color="rgba(203,162,166,0,5)">
+      		<mj-text>
+	      		CONFIRMATION DE COMMANDE
+	      	</mj-text>
+      	</mj-column>
+      </mj-section>
+
+      <!-- Article -->
+      <mj-section>
+      	<mj-column width="50%">
+	      	<mj-image width="100%" height="100%" src="photobox.png" />
+      	</mj-column>
+      	<mj-column width="50%" background-color="rgb(247,178,173)">
+      	<mj-section>
+      		<mj-column width="100%">
+		      	<mj-text>
+		      		<p>Chèr(e) client(e),</p>
+		      		<ul></ul>
+					Votre commande a été enregistrée
+					avec succès , félicitations ! Veuilllez
+					retrouver en pièces jointes :
+					- Un justificatif de paiement
+					- Une facture
+					Votre commande vous sera livrée au
+					Point Relay suivant : [Point Relay] .
+					Vous pouvez également bénéficier
+					d’une formation vidéo quant à
+					l’installation, l’utilisation et le
+					renvoi de la machine. C’est facile !
+		      	</mj-text>
+		    </mj-column>
+		<mj-section>
+		<mj-section>
+      		<mj-column width="100%">
+		      	<mj-text>
+		      		MONTREZ MOI
+		      	</mj-text>
+		    </mj-column>
+		<mj-section>
+      	</mj-column>
+      </mj-section>
+
+      <!-- Editor Header -->
+      <mj-section></mj-section>
+
+      <!-- Editor Image -->
+      <mj-section></mj-section>
+
+      <!-- Article -->
+      <mj-section></mj-section>
+
+      <!-- Social -->
+      <mj-section></mj-section>
+
+    </mj-container>
+  </mj-body>
+</mjml>
